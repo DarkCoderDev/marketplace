@@ -3,11 +3,8 @@ import React from 'react';
 import { SidebarToggle, useSidebarModel } from 'shared/ui/sidebar';
 import Link from 'next/link';
 import { useRegisterModel } from 'features/register/register.model';
-import { Button } from 'shared/ui/button';
 import { clsx } from 'clsx';
 import { Container } from 'shared/ui/container';
-// import { clsx } from 'clsx';
-// import logoImg from '../assets/logo_atomy_white.png';
 
 export const Header = () => {
   const sidebar = useSidebarModel(({ isOpen, setIsOpen }) => ({
@@ -27,17 +24,6 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
-  // content: '';
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  // background-color: rgba(0,0,0,0.05);
-  // z-index: 0;
-  // backdrop-filter: blur(5px);
-
-  // ToDo: make sticky header in the future.
   return (
     <header
       className={clsx(

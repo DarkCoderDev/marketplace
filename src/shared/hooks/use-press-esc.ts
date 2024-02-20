@@ -11,7 +11,7 @@ export const usePressEsc = (
         handler();
       }
     },
-    [handler, isSet],
+    [handler],
   );
 
   React.useEffect(() => {

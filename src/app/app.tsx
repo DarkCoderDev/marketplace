@@ -1,7 +1,5 @@
 import type { AppProps } from 'next/app';
 import localFont from 'next/font/local';
-import { DevSupport } from '@react-buddy/ide-toolbox-next';
-import { ComponentPreviews, useInitial } from 'dev';
 import { clsx } from 'clsx';
 
 const Noto_Sans = localFont({
@@ -27,20 +25,15 @@ const Noto_Sans = localFont({
 export function App(props: AppProps) {
   const { Component, pageProps } = props;
   return (
-    <DevSupport
-      ComponentPreviews={ComponentPreviews}
-      useInitialHook={useInitial}
+    <div
+      id='app'
+      role='application'
+      className={clsx(
+        Noto_Sans.className,
+        'min-w-screen min-h-screen selection:bg-sky-500',
+      )}
     >
-      <div
-        id='app'
-        role='application'
-        className={clsx(
-          Noto_Sans.className,
-          'min-w-screen min-h-screen selection:bg-sky-500',
-        )}
-      >
-        <Component {...pageProps} />
-      </div>
-    </DevSupport>
+      <Component {...pageProps} />
+    </div>
   );
 }

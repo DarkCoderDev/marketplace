@@ -1,10 +1,14 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import * as y from 'yup';
 import { isValidPhoneNumber } from 'libphonenumber-js';
-
-const isValidInn = (value: any) => {
+const isValidInn = (value: string): boolean => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   if (!value || value.match(/\D/)) return false;
   const inn = value.match(/(\d)/g);
+  if (!inn) return false;
   if (inn.length == 10) {
+
     return (
       inn[9] ==
       String(

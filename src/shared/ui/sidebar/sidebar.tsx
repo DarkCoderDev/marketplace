@@ -7,13 +7,6 @@ import { useLockScroll } from 'shared/hooks/use-lock-scroll';
 import { usePressEsc } from 'shared/hooks/use-press-esc';
 import { MODAL_CONTAINER } from 'shared/ui/modal/consts';
 import { Portal } from '../portal';
-import Transition, {
-  ENTERED,
-  ENTERING,
-  EXITED,
-  EXITING,
-  UNMOUNTED,
-} from 'react-transition-group/Transition';
 
 export const Sidebar = (props: {
   children?: React.ReactNode;
