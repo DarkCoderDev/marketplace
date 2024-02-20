@@ -1,0 +1,16 @@
+@import url('tailwind.css');
+@import url('vars.css');
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline-color: #0ea5e9;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-width: 315px;
+}
