@@ -17,7 +17,7 @@ export const Header = () => {
   const [isStickied, setIsStickied] = React.useState(false);
 
   React.useEffect(() => {
-    const scrollHandler = () => setIsStickied(window.scrollY > 0);
+    const scrollHandler = () => setIsStickied(window.scrollY > 20);
 
     window.addEventListener('scroll', scrollHandler);
 
